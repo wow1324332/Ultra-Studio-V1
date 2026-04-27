@@ -1,0 +1,5 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 커스텀 스크롤바 및 기타 전역 스타일은 App.jsx의 <style> 태그로 작동하므로 비워두셔도 무방합니다. */
