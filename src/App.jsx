@@ -808,7 +808,7 @@ const App = () => {
         const b64 = createReferenceImage.split(',')[1];
         const systemPrompt = "You are an expert AI image assistant. Engage in a creative dialogue. Using the provided reference image, fulfill the user's request flawlessly. Ensure the result is a highly detailed masterpiece.";
         
-        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/models/gemini-2.5-flash:generateContent?key=${apiKey}`, {
+        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -879,7 +879,7 @@ const App = () => {
 
     try {
       const b64 = baseImg.split(',')[1];
-      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image-preview:generateContent?key=${apiKey}`, {
+      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -968,7 +968,7 @@ const App = () => {
       if (isCancelledRef.current) throw new DOMException('Aborted', 'AbortError');
       const imageParts = targets.map(t => ({ inlineData: { mimeType: "image/png", data: t.base64 } }));
       const response = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image-preview:generateContent?key=${apiKey}`,
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
