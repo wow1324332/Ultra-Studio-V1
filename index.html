@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Ultra Studio V17</title>
+    <script>
+      // 1. 파이어베이스 연동을 위해 발급받은 설정값을 아래에 JSON 문자열 형태로 입력하세요.
+      window.__firebase_config = JSON.stringify({
+        apiKey: "AIzaSyAo1D2exR5oZVqwtQxa2vG2KlKCEOQUqVo",
+        authDomain: "ultra-studio-v1.firebaseapp.com",
+        projectId: "ultra-studio-v1",
+        storageBucket: "ultra-studio-v1.firebasestorage.app",
+        messagingSenderId: "745329517087",
+        appId: "1:745329517087:web:4d2b84d79a9a1680046b2a"
+      });
+      
+      // 익명 로그인을 사용할 것이므로 토큰은 비워둡니다.
+      window.__initial_auth_token = null;
+
+      // 2. 제미나이 AI 이미지 생성을 위한 API KEY를 입력하세요. (Google AI Studio에서 발급)
+      window.__gemini_api_key = "AIzaSyBhpGihsiU0RwNCMYPq3AGNwZF6R8kICCM";
+    </script>
+  </head>
+  <body class="bg-[#020617]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
